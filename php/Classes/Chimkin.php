@@ -71,10 +71,35 @@ class Chimkin {
     /**
      * 
      */
+    public function getChimkinPhoto(): string {
+        return $this->chimkinPhoto;
+    }
+
+    /**
+     * 
+     */
+    public function setChimkinPhoto($chimkinPhoto): void {
+        if(empty($chimkinPhoto)) {
+            throw(new \InvalidArgumentException("Photo must not be empty"));
+        }
+
+        if(get_class($chimkinPhoto) !== 'string') {
+            throw(new \TypeError("Photo must be a string."));
+        }
+
+        $this->chimkinPhoto = $chimkinPhoto;
+    }
+
+    /**
+     * 
+     */
     public function getChimkinSex(): string {
         return $this->chimkinSex;
     }
 
+    /**
+     * 
+     */
     public function setChimkinSex($chimkinSex): void {
         // Check if $chimkinSex is a string
         if(get_class($chimkinSex) !== 'string') {
@@ -89,20 +114,22 @@ class Chimkin {
         $this->chimkinSex = $chimkinSex;
     }
 
-    public function getChimkinPhoto(): string {
-        return $this->chimkinPhoto;
-    }
-
     /**
      * 
      */
     public function __construct($chimkinId, $chimkinName, $chimkinSex, $chimkinPhoto) {
         // Set variables
         try {
-            $this->chimkinId = $chimkinPhoto;
+            $this->setChimkinId($chimkinId);
+            $this->setChimkinName($chimkinName);
+            $this->setChimkinSex($chimkinSex);
+            $this->setChimkinPhoto($chimkinPhoto);
         } catch(\InvalidArgumentException | \RangeException | \Exception | \TypeError $exception) {
             $exceptionType = $exception->get_class($exception);
         }
     }
 }
+
+$chimkin = new Chimkin("abc123", "Juli", "Female", "www.photo.jpg");
+var_dump($chimkin);
 
