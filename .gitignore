@@ -63,4 +63,8 @@ typings/
 # PHP vendor
 php/vendor
 
+# .idea for some reason
 .idea
+
+# .something
+php/Classes/.something.php
