@@ -3,7 +3,8 @@
     "description": "For all your chimken needs.",
     "type": "project",
     "require": {
-        "ext-PDO": "^7.3"
+        "ext-PDO": "^7.3",
+        "ext-HTTP": "@stable"
     },
     "license": "mit",
     "authors": [{
