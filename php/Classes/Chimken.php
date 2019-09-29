@@ -54,10 +54,13 @@ class Chimkin {
 	public function __construct($chimkinId, $chimkinName, $chimkinSex, $chimkinBreed, $chimkinPhoto, $chimkinStory) {
 		// Set variables
 		try {
+			// Run all the setters
 			$this->setChimkinId($chimkinId);
 			$this->setChimkinName($chimkinName);
 			$this->setChimkinSex($chimkinSex);
+			$this->setChimkinBreed($chimkinBreed);
 			$this->setChimkinPhoto($chimkinPhoto);
+			$this->setChimkinStory($chimkinStory);
 		} catch(\InvalidArgumentException | \RangeException | \Exception | \TypeError $exception) {
 			$exceptionType = get_class($exception);
 			throw(new $exceptionType($exception->getMessage(), 0, $exception));
@@ -182,9 +185,26 @@ class Chimkin {
 		// Set value
 		$this->chimkinStory = $chimkinStory;
 	}
+
+	// Get Foo by Bars //
+
+	/**
+	 * @param $chimkinId
+	 * @return Chimkin
+	 */
+	public function getChimkinById($chimkinId): Chimkin {
+
+	}
+
+	/**
+	 * @return \SplFixedArray
+	 */
+	public function getAllChimkinsByBreed(): \SplFixedArray {
+
+	}
 }
 
-$thing = new Chimkin("abc123", "Juli", "Female", "www.mypic.com");
+$thing = new Chimkin("abc123", "Juli", "Female", "Sphinx", "www.mypic.com", "story.txt");
 
 var_dump($thing);
 
