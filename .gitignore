@@ -61,4 +61,8 @@ typings/
 .next
 
 # PHP vendor
+<<<<<<< HEAD
 php/vendor
+=======
+php/vendor
+>>>>>>> ec6f6bfe385a2808ffa7ff236b0e5ec43a8d05cc
