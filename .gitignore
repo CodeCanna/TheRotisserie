@@ -68,3 +68,6 @@ php/vendor
 
 # .something
 php/Classes/.something.php
+
+# React .something
+app/src/.something.js
