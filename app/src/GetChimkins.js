@@ -1,20 +1,25 @@
-export const getChimkin = () => {
-    let http = new XMLHttpRequest();
-    let url = "https://api.thecatapi.com/v1/images/search?breed_ids=sphy";
-    let key = {
-        "x-api-key": "7446e3a4-068f-45cd-bf4a-4da200970f1d"
-    }
+const axios = require('axios');
+const wrangle = require('express');
 
-    http.open('get', url, true);
-    http.setRequestHeader('x-api-key', key["x-api-key"]);
-    http.responseType = 'json';
-    http.send();
+function chimkinWrangler(url) {
+    axios({
+        method: 'get',
+        url: url,
+        responseType: 'json',
+        headers: {
+            "x-api-key": "7446e3a4-068f-45cd-bf4a-4da200970f1d"
+        }
+    }).then(function(response) {
 
-    http.onreadystatechange = (e) => {
-        return http.response;
-        console.log(http.response.JSON + "++++++++++++++++++++++++++++++++++++++++=");
-    }
+
+
+    }).catch(function(err) {
+        throw new Error(err);
+    });
 }
 
-export default getChimkin;
+let catUrl = "https://api.thecatapi.com/v1/images/search?breed_ids=sphy";
 
+let chimkins = chimkinWrangler(catUrl);
+
+console.log(chimkins);
