@@ -7,16 +7,12 @@ export default class UI extends React.Component {
             <>
                 <Row>
                     <Col>
-                        <Button>Prev</Button>
-                    </Col>
-                    <Col>
                         <a href={this.props.url} download={this.props.id} className="btn btn-primary">Download</a>
                     </Col>
                     <Col>
                         <form>
-
+                            <button action="submit" className="btn btn-primary">Next</button>
                         </form>
-                        <button action="submit" className="btn btn-primary">Next</button>
                     </Col>
                 </Row>
             </>
