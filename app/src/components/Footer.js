@@ -1,4 +1,5 @@
 import React from 'react';
+import UI from './UI';
 
 var style = {
     textAlign: "center",
@@ -11,18 +12,19 @@ var style = {
 }
 
 var phantom = {
-  display: 'block',
-  padding: '20px',
-  height: '60px',
-  width: '100%',
+    display: 'block',
+    padding: '20px',
+    height: '60px',
+    width: '100%',
 }
 
-function Footer() {
+function Footer(props) {
+    console.log(props.url)
     return (
         <div>
             <div style={phantom} />
             <div style={style}>
-                
+                <UI url={props.url} />
             </div>
         </div>
     )

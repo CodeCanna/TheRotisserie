@@ -3,11 +3,12 @@ import axios from 'axios';
 import {Container} from 'react-bootstrap';
 import UI from './UI';
 import getApiKey from '../.something.js';
+import Footer from './Footer';
 
 /**
  * This Component sends a GET request to The Cat API and returns a picture of a sphinx cat.
  */
-export default class PersonList extends React.Component {
+export default class Sphynx extends React.Component {
     state = {
         cats: '',
         id: ''
@@ -34,7 +35,7 @@ export default class PersonList extends React.Component {
         return (
             <Container fluid>
                 <img id="chimkin" src={this.state.cat} alt="Chimkin"/>
-                <UI url={this.state.cat} imageId={this.state.id}/>
+                <Footer url={this.state.cat} />
             </Container>
         )
     }

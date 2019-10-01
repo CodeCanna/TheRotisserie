@@ -11,7 +11,7 @@ export default class UI extends React.Component {
                     </Col>
                     <Col>
                         <form>
-                            <button action="submit" className="btn btn-primary">Next</button>
+                            <button href="/" className="btn btn-primary">Next</button>
                         </form>
                     </Col>
                 </Row>
