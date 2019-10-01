@@ -24,7 +24,7 @@ function Footer(props) {
         <div>
             <div style={phantom} />
             <div style={style}>
-                <UI url={props.url} />
+                <UI url={props.url} id={props.id} />
             </div>
         </div>
     )

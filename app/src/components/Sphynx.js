@@ -34,7 +34,7 @@ export default class Sphynx extends React.Component {
     render() {
         return (
             <Container fluid>
-                <img id="chimkin" src={this.state.cat} alt="Chimkin"/>
+                <img className="rounded" id="chimkin" src={this.state.cat} alt="Chimkin"/>
                 <Footer url={this.state.cat} />
             </Container>
         )
