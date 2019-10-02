@@ -21,13 +21,13 @@ var phantom = {
 function Footer(props) {
     console.log(props.url)
     return (
-        <div>
+        <div className="bg-light">
             <div style={phantom} />
             <div style={style}>
-                <UI url={props.url} id={props.id} />
+                <UI />
             </div>
         </div>
     )
 }
 
-export default Footer
+export default Footer;

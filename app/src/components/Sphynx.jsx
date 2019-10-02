@@ -10,7 +10,7 @@ import Footer from './Footer';
  */
 export default class Sphynx extends React.Component {
     state = {
-        cats: '',
+        cat: '',
         id: ''
     }
 
@@ -35,7 +35,7 @@ export default class Sphynx extends React.Component {
         return (
             <Container fluid>
                 <img className="rounded" id="chimkin" src={this.state.cat} alt="Chimkin"/>
-                <Footer url={this.state.cat} />
+                <UI url={this.state.cat} id={this.state.id} />
             </Container>
         )
     }
